@@ -1,0 +1,35 @@
+.main {
+	width: 100vw;
+
+	padding: 104px 0 0 0;
+
+	.main__generalInformationContainer {
+		height: 716px;
+
+		padding: 60px 80px;
+
+		.generalInformationContainer__content {
+			height: 100%;
+
+			display: flex;
+			align-items: center;
+
+			background-image: url('../../assets/images/boy.svg');
+			background-repeat: no-repeat;
+			background-position-x: right;
+			background-position-y: bottom;
+
+			.generalInformationContainer__contentText {
+				width: 41.66%;
+
+				.contentText__headerText{
+
+				}
+
+				.contentText__mainText{
+					color: var(--color-500);
+				}
+			}
+		}
+	}
+}
