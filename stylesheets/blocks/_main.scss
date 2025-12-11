@@ -28,8 +28,42 @@
 				}
 
 				.contentText__mainText {
+					margin-bottom: 32px;
+
 					line-height: 26px;
+
 					color: var(--color-500);
+				}
+
+				.contentText__contactsContainer {
+					display: flex;
+					gap: 32px;
+
+					.contactsContainer__item {
+						width: 56px;
+						aspect-ratio: 1/1;
+
+						display: flex;
+
+						justify-content: center;
+						align-items: center;
+
+						background-color: var(--color-white);
+
+						border: 2px solid;
+						border-radius: 4px;
+
+						transition: 0.3s ease;
+
+						svg {
+							width: 20px;
+							aspect-ratio: 1/1;
+						}
+
+						&:hover{
+							filter: invert(1);
+						}
+					}
 				}
 			}
 
@@ -153,6 +187,46 @@
 			}
 		}
 	}
+
+	.main__aboutMeContainer {
+		width: 100%;
+
+		padding: 60px 112px;
+		.aboutMeContainer__aboutMe {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+
+			svg,
+			.aboutMe__informationContainer {
+				flex: 1;
+			}
+
+			svg {
+				width: 100%;
+			}
+
+			.aboutMe__informationContainer {
+				.informationContainer__Title {
+					display: flex;
+					justify-content: flex-start;
+
+					padding: 20px 0;
+
+					margin-bottom: 20px;
+				}
+				.informationContainer__biography {
+					color: var(--color-500);
+					.biography__item {
+						margin-bottom: 20px;
+					}
+					.biography__item:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1400px) {
@@ -182,7 +256,8 @@
 			}
 		}
 		.main__skillsContainer,
-		.main__experienceContainer {
+		.main__experienceContainer,
+		.main__aboutMeContainer {
 			padding: 40px 16px;
 		}
 		.main__experienceContainer {
@@ -220,6 +295,12 @@
 						line-height: 1.25rem;
 						font-size: 0.75rem;
 					}
+					.contentText__contactsContainer {
+						gap: 24px;
+						.contactsContainer__item {
+							width: 48px;
+						}
+					}
 				}
 			}
 		}
@@ -232,8 +313,16 @@
 				}
 			}
 		}
-		.main__experienceContainer {
-			.experienceContainer__experience {
+		.main__aboutMeContainer {
+			.aboutMeContainer__aboutMe {
+				flex-direction: column;
+				svg {
+					width: 100%;
+				}
+				.aboutMe__informationContainer {
+					.informationContainer__Title {
+					}
+				}
 			}
 		}
 	}
@@ -286,6 +375,12 @@
 
 @media (max-width: 450px) {
 	.main {
+		.display-text,
+		.display-text-ExtraBold {
+			font-size: 1.5rem;
+			line-height: 1.75rem;
+		}
+
 		.main__generalInformationContainer {
 			.generalInformationContainer__content {
 				.generalInformationContainer__contentText {
@@ -317,6 +412,7 @@
 				}
 			}
 		}
+
 		.main__skillsContainer {
 			.display-text,
 			.display-text-ExtraBold {
@@ -330,15 +426,13 @@
 			}
 		}
 		.main__experienceContainer {
-			.display-text,
-			.display-text-ExtraBold {
-				font-size: 1.5rem;
-				line-height: 1.75rem;
-			}
 			.heading-h4-SemiBold {
 				font-size: 1.25rem;
 				line-height: 1.5rem;
 			}
+		}
+
+		.main__aboutMeContainer {
 		}
 	}
 }
