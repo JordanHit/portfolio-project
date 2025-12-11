@@ -1,0 +1,44 @@
+.footer {
+	width: 100%;
+	height: 100px;
+
+	padding: 30px 112px;
+
+	background-color: var(--color-black);
+
+	.footer__itemsContainer {
+		display: flex;
+
+		.footer__logoContainer {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+
+			.footer__logoImage {
+				width: 40px;
+			}
+			.footer__logoText {
+				font-weight: 700;
+				color: var(--color-white);
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.footer {
+		height: 80px;
+		padding: 20px 16px;
+
+		.footer__itemsContainer {
+			.footer__logoContainer {
+				svg {
+					width: 28px;
+				}
+				.heading-h5 {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
