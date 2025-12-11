@@ -551,7 +551,7 @@ ul {
 .main .main__skillsContainer .skillsContainer__skills .skills__item svg {
   width: 56px;
 }
-.main .main__skillsContainer .skillsContainer__skills .skills__item:hover, .main .main__skillsContainer .skillsContainer__skills .skills__item:focus {
+.main .main__skillsContainer .skillsContainer__skills .skills__item:hover {
   filter: invert(1);
 }
 .main .main__experienceContainer {
